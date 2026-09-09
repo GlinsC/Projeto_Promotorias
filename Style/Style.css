@@ -2,6 +2,17 @@
     overflow-y: auto;
 }
 
+/* Hide Streamlit hosting controls and leave only the application interface. */
+[data-testid="stToolbar"],
+[data-testid="stDecoration"],
+[data-testid="stStatusWidget"],
+[data-testid="stAppDeployButton"],
+#MainMenu,
+footer {
+	visibility: hidden;
+	display: none;
+}
+
 [data-testid="stSidebar"] {
 	    background: linear-gradient(180deg, #123b5d 0%, #0b263d 100%);
 	}
