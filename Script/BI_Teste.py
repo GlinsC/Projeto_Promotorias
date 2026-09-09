@@ -16,48 +16,11 @@ imagemLogoSidebar = pasta_style / "logo_mpal_22.png"
 arquivo_css = pasta_style / "Style.css"
 css = arquivo_css.read_text(encoding="utf-8")
 
-#Tratamento para corrigir caracteres especiais e normalizar o texto
-def corrigir_texto(texto):
-	texto = str(texto)
-	texto = re.sub(r"(\d+)�(?=\s+PJ|\s+Entr)", r"\1ª", texto)
-	texto = re.sub(r"(\d+)�", r"\1º", texto)
-
-	reparos = {
-		"N�": "Nº",
-		"Entr�ncia": "Entrância",
-		"Col�nia": "Colônia",
-		"Macei�": "Maceió",
-		"S�o": "São",
-		"Jos�": "José",
-		"P�o": "Pão",
-		"�gua": "Água",
-		"�ndios": "Índios",
-		"Jacar�": "Jacaré",
-		"Jacu�pe": "Jacuípe",
-		"Jequi�": "Jequié",
-		"Pia�abu�u": "Piaçabuçu",
-		"Ch�": "Chá",
-		"T�tico": "Tático",
-		"Se��o": "Seção",
-		"Prote��o": "Proteção",
-		"Tr�nsito": "Trânsito",
-		"Cibern�ticos": "Cibernéticos",
-		"Corrup��o": "Corrupção",
-		"Lavagem de Dinheiro": "Lavagem de Dinheiro",
-		"Institui��es": "Instituições",
-		"�": "é",
-	}
-	for incorreto, correto in reparos.items():
-		texto = texto.replace(incorreto, correto)
-	return texto
-
-
 # Normalizar a promotoria para garantir consistência
 def normalizar_promotoria(texto):
 	return re.sub(r"(?<=\d)[ª°]", "º", texto)
 
-# Aplicando as funções de tratamento e normalização nos dados
-dados = dados.map(lambda valor: corrigir_texto(valor) if isinstance(valor, str) else valor)
+# Aplicar somente a normalização dos símbolos ordinais na promotoria
 dados = dados.rename(columns={dados.columns[-1]: "RESOLUCAO"})
 dados["PROMOTORIA"] = dados["PROMOTORIA"].map(normalizar_promotoria)
 
