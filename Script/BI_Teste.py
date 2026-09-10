@@ -27,20 +27,21 @@ dados["PROMOTORIA"] = dados["PROMOTORIA"].map(normalizar_promotoria)
 # Identificar a resolução com base em palavras-chave
 def identidade_resolucao(resolucao):
 	identidades = [
-		("POLICIAL", "Policial", "#1769aa", "#e5f3ff", "Quinto dia util do mês subsequente à visita."),
-		("MILITAR", "Militar", "#b42318", "#fff0ee", "Quinto dia util do mês subsequente à visita."),
-		("PRISIONAIS", "Estabelecimentos prisionais", "#6b46c1", "#f2edff", "Quinto dia util do mês subsequente à visita."),
-		("IDOSOS", "Pessoas idosas", "#19724a", "#e9f8f0", "Até o dia 15 do mês subsequente à inspeção."),
-		("ACOLHIMENTO INSTITUCIONAL", "Acolhimento institucional", "#b45309", "#fff6e5", "1º Semestre: até 15/05; 2º Semestre: até 01/12."),
-		("FAMÍLIA ACOLHEDORA", "Família acolhedora", "#c24178", "#fff0f6" , "1º Semestre: até 15/05; 2º Semestre: até 01/12."),
-		("LIBERDADE ASSISTIDA", "Liberdade assistida e PSC", "#087f8c", "#e7f8fa", "Até o dia 15/7"),
-		("INTERNAÇÃO", "Internação", "#334e68", "#edf3f8", "Bimistre, 1º 15/03; 2º 15/05; 3º 15/07; 4º 15/09; 5º 15/11; 6º 15/01."),
-		("SEMILIBERDADE", "Semiliberdade", "#8a5a00", "#fff8df", "Bimistre, 1º 15/03; 2º 15/05; 3º 15/07; 4º 15/09; 5º 15/11; 6º 15/01.")
+		("POLICIAL", "Policial", "#1769aa", "#e5f3ff", "Quinto dia util do mês subsequente à visita.", "Controle externo de atividades policiais."),
+		("MILITAR", "Militar", "#b42318", "#fff0ee", "Quinto dia util do mês subsequente à visita.", "Controle externo de atividades militares."),
+		("PRISIONAIS", "Estabelecimentos prisionais", "#6b46c1", "#f2edff", "Quinto dia util do mês subsequente à visita.", "Execução Penal."),
+		("IDOSOS", "Pessoas idosas", "#19724a", "#e9f8f0", "Até o dia 15 do mês subsequente à inspeção.", "Defesa dos direitos dos idosos."),
+		("ACOLHIMENTO INSTITUCIONAL", "Acolhimento institucional", "#b45309", "#fff6e5", "1º Semestre: até 15/05; 2º Semestre: até 01/12.", "Aréa da infância e juventude."),
+		("FAMÍLIA ACOLHEDORA", "Família acolhedora", "#c24178", "#fff0f6" , "1º Semestre: até 15/05; 2º Semestre: até 01/12.", "Aréa da infância e juventude."),
+		("LIBERDADE ASSISTIDA", "Liberdade assistida e PSC", "#087f8c", "#e7f8fa", "Até o dia 15/7", "Execução de medidas socioeducativas em meio aberto."),
+		("INTERNAÇÃO", "Internação", "#334e68", "#edf3f8", "Bimistre, 1º 15/03; 2º 15/05; 3º 15/07; 4º 15/09; 5º 15/11; 6º 15/01.", "Execução de medidas socioeducativas"),
+		("SEMILIBERDADE", "Semiliberdade", "#8a5a00", "#fff8df", "Bimistre, 1º 15/03; 2º 15/05; 3º 15/07; 4º 15/09; 5º 15/11; 6º 15/01.", "Execução de medidas socioeducativas"),
+		("INTERCEPTAÇÃO TELEFÔNICA", "Interceptação telefônica", "#b45309", "#fff6e5", "Até o dia 10 do mês subsequente à inspeção.", "Criminal."),
 	]
-	for termo, nome, cor, fundo, prazo in identidades:
+	for termo, nome, cor, fundo, prazo, descricao in identidades:
 		if termo in resolucao.upper():
-			return nome, cor, fundo, prazo
-	return "Todas as resoluções", "#123b5d", "#eef7fc", ""
+			return nome, cor, fundo, prazo, descricao
+	return "Todas as resoluções", "#123b5d", "#eef7fc", "", "",
 
 
 # Importando o CSS e aplicando no Streamlit
@@ -67,7 +68,7 @@ if opcaoResolucao != "Todas":
 if opcaoPromotoria != "Todas":
 	dados_filtrados = dados_filtrados[dados_filtrados["PROMOTORIA"] == opcaoPromotoria]
 
-nome_identidade, cor, fundo_identidade, prazo = identidade_resolucao(opcaoResolucao)
+nome_identidade, cor, fundo_identidade, prazo, descricao = identidade_resolucao(opcaoResolucao)
 filtro_ativo = opcaoResolucao != "Todas" or opcaoPromotoria != "Todas"
 
 # Exibição dos dados filtrados ou mensagem de boas-vindas
@@ -91,7 +92,8 @@ else:
 	st.markdown(
 		f'<div class="resolution-banner" style="--identity-color: {cor}; --identity-background: {fundo_identidade};">'
 		f'<span>Resolução selecionada</span><strong>{nome_identidade}</strong></div>'
-		f'<p><strong>Prazo:</strong> {prazo}</p>',
+		f'<p><strong>Prazo:</strong> {prazo}</p>'
+		f'<p><strong>Membros:</strong> {descricao}</p>',
 		unsafe_allow_html=True,
 	)
 
@@ -104,7 +106,13 @@ else:
 			f"background-color: {cor_linha}; color: #172b3a"
 			for _ in linha
 		]
+	
+	if dados_filtrados["UNIDADE"].isna().all():
+		colunas_exibicao = ["PROMOTORIA", "ENTRANCIA", "RESOLUCAO"]
+		dados_para_exibir = dados_filtrados[colunas_exibicao]
+	else:
+		dados_para_exibir = dados_filtrados
 
-	dados_estilizados = dados_filtrados.style.apply(alternar_linhas, axis=1)
+	dados_estilizados = dados_para_exibir.style.apply(alternar_linhas, axis=1)
 	st.dataframe(dados_estilizados, width="stretch", hide_index=True, use_container_width=True)
 

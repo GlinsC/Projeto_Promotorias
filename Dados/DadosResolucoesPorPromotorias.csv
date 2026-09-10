@@ -110,9 +110,9 @@ PJ de Matriz de Camaragibe,90° DP Matriz do Camaragibe / Matriz de Camaragibe-A
 PJ de Olho D'Água das Flores,35º DP Olho d'Água das Flores / Olho d'Água das Flores-AL,1ª Entrância,CNMP Nº 279/2023 POLICIAL
 PJ de Paripueira,13º Distrito da Capital / Paripueira-AL,1ª Entrância,CNMP Nº 279/2023 POLICIAL
 PJ de Paripueira,19º Distrito da Capital / Barra de Santo Antônio-AL,1ª Entrância,CNMP Nº 279/2023 POLICIAL
-PJ de Passo de Camaragibe,94° DP Passo de Camaragibe / Passo de Camaragibe-AL,1ª Entrância,CNMP Nº 279/2023 POLICIAL
-PJ de Passo de Camaragibe,95° DP Porto de Pedras / Porto de Pedras-AL,1ª Entrância,CNMP Nº 279/2023 POLICIAL
-PJ de Passo de Camaragibe,97° DP São Miguel dos Milagres / São Miguel dos Milagres-AL,1ª Entrância,CNMP Nº 279/2023 POLICIAL
+PJ Passo de Camaragibe,94° DP Passo de Camaragibe / Passo de Camaragibe-AL,1ª Entrância,CNMP Nº 279/2023 POLICIAL
+PJ Passo de Camaragibe,95° DP Porto de Pedras / Porto de Pedras-AL,1ª Entrância,CNMP Nº 279/2023 POLICIAL
+PJ Passo de Camaragibe,97° DP São Miguel dos Milagres / São Miguel dos Milagres-AL,1ª Entrância,CNMP Nº 279/2023 POLICIAL
 PJ de Piaçabuçu,88° DP Piaçabuçu / Piaçabuçu-AL,1ª Entrância,CNMP Nº 279/2023 POLICIAL
 PJ de Piranhas,32º DP Piranhas / Piranhas-AL,1ª Entrância,CNMP Nº 279/2023 POLICIAL
 PJ de Porto Real do Colégio,85° DP Porto Real do Colégio / Porto Real do Colégio-AL,1ª Entrância,CNMP Nº 279/2023 POLICIAL
@@ -252,7 +252,7 @@ PJ de Olho D'Água das Flores,MONTEIRÓPOLIS,1ª Entrância,CNPM Nº 204/2019 LI
 PJ de Olho D'Água das Flores,OLHO D'ÁGUA DAS FLORES,1ª Entrância,CNPM Nº 204/2019 LIBERDADE ASSISTIDA E PSC
 PJ de Paripueira,BARRA DE SANTO ANTÔNIO,1ª Entrância,CNPM Nº 204/2019 LIBERDADE ASSISTIDA E PSC
 PJ de Paripueira,PARIPUEIRA,1ª Entrância,CNPM Nº 204/2019 LIBERDADE ASSISTIDA E PSC
-PJ de Passo de Camaragibe,PASSO DE CAMARAGIBE,1ª Entrância,CNPM Nº 204/2019 LIBERDADE ASSISTIDA E PSC
+PJ Passo de Camaragibe,PASSO DE CAMARAGIBE,1ª Entrância,CNPM Nº 204/2019 LIBERDADE ASSISTIDA E PSC
 PJ Passo de Camaragibe,PORTO DE PEDRAS,1ª Entrância,CNPM Nº 204/2019 LIBERDADE ASSISTIDA E PSC
 PJ Passo de Camaragibe,SÃO MIGUEL DOS MILAGRES,1ª Entrância,CNPM Nº 204/2019 LIBERDADE ASSISTIDA E PSC
 PJ de Piaçabuçu,FELIZ DESERTO,1ª Entrância,CNPM Nº 204/2019 LIBERDADE ASSISTIDA E PSC
@@ -359,3 +359,161 @@ PJ Pilar,Unidade de Acolhimento de Longa Permanência para Idosos – Auta Rocha
 PJ de Pilar,Unidade de Internação Masculina Provisória de Pilar,2º Entrância,CNMP nº 321/2025 INTERNAÇÃO 
 12ª PJ da Capital,Unidade de Semiliberdade Masculina – USM – Graça Torta – AL ,3º Entrância,CNMP nº 321/2025 SEMILIBERDADE
 1ª PJ de Rio Largo,Unidade de Semiliberdade Sagrada Família,2º Entrância,CNMP nº 321/2025 SEMILIBERDADE
+GAESF,,Órgão de apoio,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+GAECO,,Órgão de apoio,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 1ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 2ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 3ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 4ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 5ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 6ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 7ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 8ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 9ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 10ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 11ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+12ª PJ da Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 13ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 14ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 15ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 16ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 17ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 18ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 19ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 20ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 21ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 22ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 23ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 24ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 25ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 26ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 27ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 28ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 29ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 30ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 31ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 32ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 33ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 34ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 35ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 36ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 37ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 38ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 39ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 40ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 41ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 42ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 43ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 44ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 45ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 46ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 47ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 48ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 49ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 50ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 51ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 52ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 53ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 54ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 55ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 56ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 57ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 58ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 59ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 60ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 61ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 62ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 63ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 64ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 65ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 66ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 67ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 68ª Capital,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 1ª Arapiraca,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 2ª Arapiraca,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 3ª Arapiraca,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 4ª Arapiraca,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 5ª Arapiraca,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 6ª Arapiraca,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 7ª Arapiraca,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 8ª Arapiraca,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 9ª Arapiraca,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 1ª Atalaia,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 2ª Atalaia,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 1ª Coruripe,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 2ª Coruripe,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 1ª Marechal Deodoro,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 2ª Marechal Deodoro,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 1ª Palmeira dos Índios,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 2ª Palmeira dos Índios,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 3ª Palmeira dos Índios,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 4ª Palmeira dos Índios,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 5ª Palmeira dos Índios,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 6ª Palmeira dos Índios,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 1ª Penedo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 2ª Penedo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 3ª Penedo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 4ª Penedo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 5ª Penedo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 6ª Penedo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 1ª Porto Calvo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 2ª Porto Calvo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 1ª Rio Largo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 2ª Rio Largo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 3ª Rio Largo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 4ª Rio Largo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 5ª Rio Largo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 1ª Santana do Ipanema,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 2ª Santana do Ipanema,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 3ª Santana do Ipanema,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 4ª Santana do Ipanema,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 1ª São Miguel dos Campos,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 2ª São Miguel dos Campos,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 3ª São Miguel dos Campos,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 4ª São Miguel dos Campos,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 5ª São Miguel dos Campos,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 1ª União dos Palmares,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 2ª União dos Palmares,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 3ª União dos Palmares,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ 4ª União dos Palmares,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Água Branca,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Anadia,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Batalha,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Boca da Mata,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Cacimbinhas,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Cajueiro,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Campo Alegre,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Capela,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Colônia Leopoldina,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Feira Grande,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Girau do Ponciano,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Igaci,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Igreja Nova,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Joaquim Gomes,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Junqueiro,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Limoeiro de Anadia,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Major Izidoro,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Maragogi,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Maravilha,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Maribondo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Mata Grande,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Matriz de Camaragibe,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Murici,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Olho d'Água das Flores,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Paripueira,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Passo de Camaragibe,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Piaçabuçu,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Pilar,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Piranhas,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Porto Real do Colégio,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Pão de Açúcar,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Quebrangulo,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Santa Luzia do Norte,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ São José da Laje,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ São José da Tapera,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ São Luís do Quitunde,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ São Sebastião,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Taquarana,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Teotônio Vilela,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Traipu,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
+PJ Viçosa,,Entrância,CNMP nº 36/2009 INTERCEPTAÇÃO TELEFÔNICA 
