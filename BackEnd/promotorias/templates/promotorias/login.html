@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar | Painel</title>
+    <link rel="stylesheet" href="{% static 'promotorias/login.css' %}">
+</head>
+<body>
+    <main class="login-shell">
+        <section class="login-card" aria-labelledby="login-title">
+            <p class="eyebrow">Painel administrativo</p>
+            <h1 id="login-title">Entrar</h1>
+            <p class="intro">Use suas credenciais para acessar a administracao.</p>
+
+            {% if messages %}
+                <div class="messages" role="alert">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <form method="post">
+                {% csrf_token %}
+                <label for="username">Nome de usuario</label>
+                <input id="username" name="username" type="text" autocomplete="username" required autofocus>
+
+                <label for="password">Senha</label>
+                <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+                <button type="submit">Acessar painel</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

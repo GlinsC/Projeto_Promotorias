@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel | Promotorias</title>
+    <link rel="stylesheet" href="{% static 'promotorias/painel.css' %}">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="sidebar-user"><span>Usuário conectado</span><strong>{{ usuario.username }}</strong></div>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button class="button button-quiet" type="submit">Sair</button>
+            </form>
+            <div class="brand"><strong>MPAL</strong><span>Controle externo</span></div>
+            <div class="sidebar-copy">
+                <p class="eyebrow">Painel administrativo</p>
+                <h2>Gestão de promotorias</h2>
+                <p>Organize as unidades e as resoluções vinculadas.</p>
+            </div>
+        </aside>
+
+        <main class="content">
+            <header class="page-header">
+                <div>
+                    <p class="eyebrow">Dados cadastrados</p>
+                    <h1>Promotorias e resoluções</h1>
+                    <p class="subtitle">Consulte, edite e mantenha os vínculos da base.</p>
+                </div>
+                <button class="button button-primary" type="button" data-new-button>+ Nova promotoria</button>
+            </header>
+
+            {% if messages %}<div class="messages">{% for message in messages %}<p class="message-{{ message.tags }}">{{ message }}</p>{% endfor %}</div>{% endif %}
+
+            <section class="toolbar" aria-label="Filtros">
+                <form method="get" class="search-form">
+                    <label for="search">Buscar promotoria</label>
+                    <div class="search-row">
+                        <input id="search" name="q" value="{{ query }}" type="search" list="promotorias-list" placeholder="Digite o nome da promotoria" autocomplete="off">
+                        <datalist id="promotorias-list">
+                            {% for promotoria in promotorias %}
+                                <option value="{{ promotoria.nome_promotoria }}"></option>
+                            {% endfor %}
+                        </datalist>
+                        <button class="button button-secondary" type="submit">Buscar</button>
+                        {% if query %}<a class="clear-link" href="{% url 'painel' %}">Limpar</a>{% endif %}
+                    </div>
+                </form>
+                <span class="record-count">{{ page_obj.paginator.count }} registro{{ page_obj.paginator.count|pluralize:"s" }}</span>
+            </section>
+
+            <section class="table-card"><div class="table-wrap"><table>
+                <thead><tr><th>Promotoria</th><th>Entrância</th><th>Resolução</th><th>Unidade</th><th class="actions-column">Ações</th></tr></thead>
+                <tbody>
+                    {% for row in page_obj %}
+                    <tr>
+                        <td class="promotoria-name">{{ row.nome_promotoria }}</td>
+                        <td>{{ row.entrancia|default:"-" }}</td><td>{{ row.resolucao }}</td><td>{{ row.unidade|default:"-" }}</td>
+                        <td class="actions">
+                            <button class="icon-button edit-button" type="button" data-edit-button data-id="{{ row.id }}" data-name="{{ row.nome_promotoria }}" data-entrancia="{{ row.entrancia }}" title="Editar promotoria">Editar</button>
+                            <form method="post" action="{% url 'excluir_promotoria' row.id %}" onsubmit="return confirm('Excluir esta promotoria e seus vínculos?');">
+                                {% csrf_token %}<button class="icon-button delete-button" type="submit" title="Excluir promotoria">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% empty %}<tr><td class="empty-state" colspan="5">Nenhuma promotoria encontrada.</td></tr>{% endfor %}
+                </tbody>
+            </table></div></section>
+
+            {% if page_obj.paginator.num_pages > 1 %}
+            <nav class="pagination" aria-label="Paginação">
+                {% if page_obj.has_previous %}
+                    <a href="?{% if query %}q={{ query|urlencode }}&amp;{% endif %}page={{ page_obj.previous_page_number }}">Anterior</a>
+                {% else %}<span class="disabled">Anterior</span>{% endif %}
+                <span>Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</span>
+                {% if page_obj.has_next %}
+                    <a href="?{% if query %}q={{ query|urlencode }}&amp;{% endif %}page={{ page_obj.next_page_number }}">Próxima</a>
+                {% else %}<span class="disabled">Próxima</span>{% endif %}
+            </nav>
+            {% endif %}
+
+            <section class="form-card" id="promotoria-form" hidden>
+                <div class="form-heading"><div><p class="eyebrow">Cadastro</p><h2 data-form-title>Nova promotoria</h2></div><button class="close-button" type="button" data-close-button aria-label="Fechar formulário">×</button></div>
+                <form method="post" action="{% url 'salvar_promotoria' %}">
+                    {% csrf_token %}<input type="hidden" name="promotoria_id" data-form-id>
+                    <div class="form-grid">
+                        <div><label for="nome_promotoria">Nome da promotoria</label><input id="nome_promotoria" name="nome_promotoria" type="text" list="form-promotorias-list" autocomplete="off" required data-form-name><datalist id="form-promotorias-list">{% for promotoria in promotorias %}<option value="{{ promotoria.nome_promotoria }}"></option>{% endfor %}</datalist></div>
+                        <div><label for="entrancia">Entrância</label><input id="entrancia" name="entrancia" type="text" list="entrancias-list" autocomplete="off" placeholder="Ex.: 1ª Entrância" data-form-entrancia><datalist id="entrancias-list">{% for entrancia in entrancias %}<option value="{{ entrancia }}"></option>{% endfor %}</datalist></div>
+                        <div><label for="resolucao_id">Adicionar resolução</label><select id="resolucao_id" name="resolucao_id"><option value="">Nenhuma neste momento</option>{% for resolucao in resolucoes %}<option value="{{ resolucao.id }}">{{ resolucao.nome_resolucao }}</option>{% endfor %}</select></div>
+                        <div><label for="unidade">Unidade</label><input id="unidade" name="unidade" type="text" placeholder="Opcional"></div>
+                    </div>
+                    <div class="form-actions"><button class="button button-secondary" type="button" data-close-button>Cancelar</button><button class="button button-primary" type="submit">Salvar alterações</button></div>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script>
+        const form = document.querySelector('#promotoria-form');
+        const formTitle = document.querySelector('[data-form-title]');
+        const formId = document.querySelector('[data-form-id]');
+        const formName = document.querySelector('[data-form-name]');
+        const formEntrancia = document.querySelector('[data-form-entrancia]');
+        function openForm(button, editing) {
+            form.hidden = false;
+            formTitle.textContent = editing ? 'Editar promotoria' : 'Nova promotoria';
+            formId.value = editing ? button.dataset.id : '';
+            formName.value = editing ? button.dataset.name : '';
+            formEntrancia.value = editing ? button.dataset.entrancia : '';
+            form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            formName.focus();
+        }
+        document.querySelector('[data-new-button]').addEventListener('click', () => openForm({}, false));
+        document.querySelectorAll('[data-edit-button]').forEach((button) => button.addEventListener('click', () => openForm(button, true)));
+        document.querySelectorAll('[data-close-button]').forEach((button) => button.addEventListener('click', () => { form.hidden = true; }));
+    </script>
+</body>
+</html>

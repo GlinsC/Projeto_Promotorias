@@ -68,6 +68,19 @@ if opcaoResolucao != "Todas":
 if opcaoPromotoria != "Todas":
 	dados_filtrados = dados_filtrados[dados_filtrados["PROMOTORIA"] == opcaoPromotoria]
 
+# Ordenar a entrância pelo número, da maior para a menor.
+# Valores sem número, como "Órgão de apoio", ficam no final.
+dados_filtrados = dados_filtrados.sort_values(
+	by="ENTRANCIA",
+	key=lambda coluna: pd.to_numeric(
+		coluna.astype("string").str.extract(r"(\d+)", expand=False),
+		errors="coerce",
+	),
+	ascending=False,
+	na_position="last",
+	kind="mergesort",
+)
+
 nome_identidade, cor, fundo_identidade, prazo, descricao = identidade_resolucao(opcaoResolucao)
 filtro_ativo = opcaoResolucao != "Todas" or opcaoPromotoria != "Todas"
 
@@ -88,6 +101,7 @@ if not filtro_ativo:
 	)
 elif dados_filtrados.empty:
 	st.warning("Nenhum registro encontrado para os filtros escolhidos.")
+#Visualização dos dados filtrados com estilo
 else:
 	st.markdown(
 		f'<div class="resolution-banner" style="--identity-color: {cor}; --identity-background: {fundo_identidade};">'
@@ -110,9 +124,11 @@ else:
 	if dados_filtrados["UNIDADE"].isna().all():
 		colunas_exibicao = ["PROMOTORIA", "ENTRANCIA", "RESOLUCAO"]
 		dados_para_exibir = dados_filtrados[colunas_exibicao]
+	elif dados_filtrados["RESOLUCAO"].values[0] == "CNMP nº 73/2007 MAGISTÉRIO":
+		colunas_exibicao = ["PROMOTORIA", "RESOLUCAO", "UNIDADE"]
+		dados_para_exibir = dados_filtrados[colunas_exibicao]
 	else:
 		dados_para_exibir = dados_filtrados
-
+		
 	dados_estilizados = dados_para_exibir.style.apply(alternar_linhas, axis=1)
-	st.dataframe(dados_estilizados, width="stretch", hide_index=True, use_container_width=True)
-
+	st.dataframe(dados_estilizados, width="stretch", hide_index=True, use_container_width=True, )
